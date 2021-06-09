@@ -1,9 +1,9 @@
-const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
-
-const cors = require("cors");
-
+const express     = require("express");
+const app         = express();
+const bodyParser  = require("body-parser");
+const cors        = require("cors");
+const passport    = require("passport");
+const session      =require ("express-session");
 //const mongoose = require('mongoose')
 //mongoose.connect(process.env.MLAB_URI || 'mongodb://localhost/global-future' )
 
@@ -11,8 +11,17 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 app.use(express.static("public"));
+app.use(session({
+  secret:process.env.SESSION_SECRET,
+  resave: true,
+  saveUnitialized: true,
+  cookie: {secure:false }
+}));
+app.use(passport.initialize());
+
+
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/");
 });
@@ -92,7 +101,20 @@ app.post("/comments/", (req, res)=> {
   //email address to catch the comments easily -
   //  action=”mailto:contact@yourdomain.com”
   res.sendFile(__dirname + "/views/index.html");
-})
+});
+
+
+passport.serializeUser((user, done) => {
+  done(null, user._id);
+});
+
+passport.deserializeUser((id, done) => {
+  //myDataBase.findOne({ _id: new ObjectID(id) }, (err, doc) => {
+    done(null, null);
+//  });
+});
+
+
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log("Your app is listening on port " + listener.address().port);
 });
