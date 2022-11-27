@@ -1,5 +1,6 @@
 dependencies:
   body-parser: 1.19.0
+  bootstrap: 5.2.3
   cors: 2.8.5
   express: 4.17.1
   express-session: 1.17.1
@@ -48,6 +49,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-dhEPs72UPbDnAQJ9ZKMNTP6ptJaionhP5cBb541nXPlW60Jepo9RV/a4fX4XWW9CuFNK22krhrj1+rgzifNCsw==
+  /bootstrap/5.2.3:
+    dev: false
+    peerDependencies:
+      '@popperjs/core': ^2.11.6
+    resolution:
+      integrity: sha512-cEKPM+fwb3cT8NzQZYEu4HilJ3anCrWqh3CHAok1p9jXqMPsPTBhU25fBckEJHJ/p+tTxTFTsFQGM+gaHpi3QQ==
   /bson/1.0.9:
     deprecated: 'Fixed a critical issue with BSON serialization documented in CVE-2019-2391, see https://bit.ly/2KcpXdo for more details'
     dev: false
@@ -674,6 +681,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   body-parser: ^1.19.0
+  bootstrap: ^5.2.3
   cors: ^2.8.5
   express: ^4.17.1
   express-session: ^1.17.1

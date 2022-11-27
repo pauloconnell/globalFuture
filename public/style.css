@@ -25,7 +25,12 @@ p {
 
 button {
   border: 3px solid black;
-  border-radius: 4px;
+  border-radius: 3px;
+  color: rgba(23, 34, 65, 1);
+  padding: 20px 30px;
+  margin-bottom:20px;
+  justify-content: center;
+  
 }
 
 button:hover {
@@ -34,7 +39,7 @@ button:hover {
 form {
   margin-bottom: 25px;
   padding: 15px;
-  background-color: #87D37C;
+  background-color: #87d37c;
   display: inline-block;
   width: 100%;
   max-width: 340px;
@@ -65,20 +70,20 @@ input:checked {
 input[type="submit"] {
   font-size: 16px;
   border-radius: 3px;
-  background-color: #E4F1FE;
+  background-color: #e4f1fe;
   border: 1px solid grey;
   box-shadow: 2px 2px #999;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #FFFEC4;
+  background-color: #fffec4;
 }
 
 code {
   font-family: monospace;
   font-size: 1.2em;
-  background-color: #FFFEC4;
+  background-color: #fffec4;
   padding: 2px;
 }
 
