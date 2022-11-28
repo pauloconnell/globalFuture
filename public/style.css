@@ -27,10 +27,13 @@ button {
   border: 3px solid black;
   border-radius: 3px;
   color: rgba(23, 34, 65, 1);
-  padding: 20px 30px;
-  margin-bottom:20px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
   justify-content: center;
-  
+}
+
+button:nth-of-type(odd) {
+  padding: 6px 5px;
 }
 
 button:hover {
